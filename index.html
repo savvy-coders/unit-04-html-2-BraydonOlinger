@@ -2,3 +2,67 @@
 <!-- Remember to start by typing a single exclamation point (!) and then hitting enter or selecting the first dropdown option.-->
 <!-- This will give you the basic, necessary skeletal elements of a webpage so you can begin coding to our specific requirements! -->
 <!-- Good luck! You've got this! -->
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Unit 4 Excercise</title>
+</head>
+<body>
+<div> 
+    <label>
+        Username:
+        <input type="username" name="username" placeholder="Enter your username" required>
+    </label>
+</div>
+
+<div>
+    <label>
+        What is your favorite fruit?
+        <input type="checkbox" name="fruit" value="Apple"> Apple 
+        <input type="checkbox" name="fruit" value="Banana"> Banana
+        <input type="checkbox" name="fruit" value="Orange"> Orange
+        </label>
+</div>
+
+<div>
+    <label>
+        Select a gender:
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+        <input type="radio" name="gender" value="other" required> Other
+    </label>
+</div>
+
+<div>
+    <label>
+        Select a Country:
+        <select name="country" required>
+            <option value="Select a Country">Select a Country</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+        </select>
+    </label>
+<div>  
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); 
+        
+          var username = document.forms["myForm"]["username"].value;
+          var fruit = document.forms["myForm"]["fruit"].value;
+          var gender = document.forms["myForm"]["fruit"].value;
+          var country = document.forms["myForm"]["country"].value;
+
+          alert("Form submitted!");
+        }
+      </script>
+
+</div>
+    <form action="/submit-form" method="POST">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
